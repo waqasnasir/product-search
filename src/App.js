@@ -5,7 +5,9 @@ import { PageHeader, Button, Upload } from "antd"
 import { UploadOutlined } from "@ant-design/icons"
 import styled from "styled-components"
 import Papa from "papaparse"
+import { useDispatch } from "react-redux"
 import Home from "./pages/Home/Home"
+import { loadProducts } from "./redux/actions"
 
 const Container = styled.div`
   padding: 30px 50px;
@@ -20,6 +22,7 @@ const StyledHeader = styled(PageHeader)`
 function App() {
   const [uploading, setUploading] = useState(false)
   const [file, setFile] = useState()
+  const dispatch = useDispatch()
   const props = {
     onRemove: () => {
       setFile()
@@ -33,8 +36,10 @@ function App() {
   const handleImport = async () => {
     setUploading(true)
     Papa.parse(file, {
+      header: true,
       complete: (data) => {
         console.log(data)
+        dispatch(loadProducts(data.data))
         setUploading(false)
         setFile()
       },
