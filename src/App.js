@@ -10,6 +10,9 @@ const Container = styled.div`
   padding: 30px 50px;
 `
 const StyledHeader = styled(PageHeader)`
+  &.ant-page-header {
+    padding: 0px;
+  }
   .ant-page-header-heading {
     height: 85px;
   }

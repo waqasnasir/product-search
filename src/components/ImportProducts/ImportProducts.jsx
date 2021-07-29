@@ -6,7 +6,7 @@ import Papa from "papaparse"
 import { useDispatch } from "react-redux"
 import { loadProducts } from "../../redux/actions"
 
-const ImportProducst = () => {
+const ImportProducts = () => {
   const [uploading, setUploading] = useState(false)
   const [file, setFile] = useState()
   const dispatch = useDispatch()
@@ -58,4 +58,4 @@ const ImportProducst = () => {
   )
 }
 
-export default ImportProducst
+export default ImportProducts
