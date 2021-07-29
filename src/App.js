@@ -1,56 +1,20 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom"
-import React, { useState } from "react"
-import { PageHeader, Button, Upload } from "antd"
-import { UploadOutlined } from "@ant-design/icons"
+import React from "react"
+import { PageHeader } from "antd"
 import styled from "styled-components"
-import Papa from "papaparse"
-import { useDispatch } from "react-redux"
 import Home from "./pages/Home/Home"
-import { loadProducts } from "./redux/actions"
+import ImportProducts from "./components/ImportProducts/ImportProducts"
 
 const Container = styled.div`
   padding: 30px 50px;
 `
-
 const StyledHeader = styled(PageHeader)`
   .ant-page-header-heading {
     height: 85px;
   }
 `
-
 function App() {
-  const [uploading, setUploading] = useState(false)
-  const [file, setFile] = useState()
-  const dispatch = useDispatch()
-  const props = {
-    onRemove: () => {
-      setFile()
-    },
-    beforeUpload: (selectedFile) => {
-      setFile(selectedFile)
-      return false
-    },
-    fileList: file && [file],
-  }
-  const handleImport = async () => {
-    setUploading(true)
-    Papa.parse(file, {
-      header: true,
-      complete: (data) => {
-        console.log(data)
-        dispatch(loadProducts(data.data))
-        setUploading(false)
-        setFile()
-      },
-      error: (error) => {
-        console.log(error)
-        setUploading(false)
-        setFile()
-      },
-    })
-  }
-
   return (
     <Container>
       <BrowserRouter>
@@ -60,23 +24,7 @@ function App() {
               Search Products
             </Link>
           }
-          extra={[
-            <Button
-              key="selectfile"
-              type="primary"
-              onClick={handleImport}
-              disabled={!file}
-              loading={uploading}
-              style={{ marginTop: 16 }}
-            >
-              {uploading ? "Importing" : "Import products"}
-            </Button>,
-            <Upload {...props} key="upload">
-              <Button disabled={file} icon={<UploadOutlined />}>
-                Select File
-              </Button>
-            </Upload>,
-          ]}
+          extra={[<ImportProducts />]}
         />
         <Switch>
           <Route exact path="/">
