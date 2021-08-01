@@ -10,7 +10,7 @@ const Blog = ({ title, price, image, skuId, gender, salePrice }) => (
   <CustomCard
     key={skuId}
     style={{ width: 300 }}
-    cover={<StyledImage alt="example" src={image} />}
+    cover={<StyledImage alt="example" width="300" height="250" src={image} />}
     actions={[
       <StyledLabel>Was: {price}</StyledLabel>,
       <StyledLabel>Now: {salePrice}</StyledLabel>,

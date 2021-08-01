@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { LazyLoadImage } from "react-lazy-load-image-component"
 import { Card } from "antd"
 
 export const CustomCard = styled(Card)`
@@ -11,7 +12,6 @@ export const StyledLabel = styled.div`
   color: #00000073;
   cursor: default;
 `
-export const StyledImage = styled.img`
-  height: 100%;
+export const StyledImage = styled(LazyLoadImage)`
   object-fit: contain;
 `
