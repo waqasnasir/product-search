@@ -1,53 +1,40 @@
 # This project was created using create react app you can find create react app ReadMe at the end of this page 
 
 ## ____________________________________________________introduction_________________________________________________________
-# This is simple application which imports products data from a csv file. It loads the data into the app
-# User can filter out products using the following filter options available in the app
+ This is simple application which imports products data from a csv file. It loads the data into the app
+ User can filter out products using the following filter options available in the app
 #                                       ----Search-----
-# user can use searchbar to search products. Results will be updated on each keypress
+ user can use searchbar to search products. Results will be updated on each keypress
 #                                       ----Discounted Item---- 
-#  user can user user discounted check box to view only products on which discount is available
+  user can user user discounted check box to view only products on which discount is available
 #                                       ----Gender Selection----
-# user can select gender from gender drop down. Gender can be female/male/unix to view collection 
-# of relevant gender
+ user can select gender from gender drop down. Gender can be female/male/unix to view collection 
+ of relevant gender
 
 
 ## ____________________________________________________Instructions_________________________________________________________
-# Please follow steps below to runt the application in your local environment
-# 1. git clone repo-url
-# 2. cd to/project/repo
-# 3. npm i
-# 4. npm start
-# that's all you should be able to access application on localhost:3000
+ Please follow steps below to runt the application in your local environment
+ 1. git clone repo-url
+ 2. cd to/project/repo
+ 3. npm i
+ 4. npm start
+ that's all you should be able to access application on localhost:3000
 
 
 ## ____________________________________________________Documentation________________________________________________________
-# Following external libraries are used in the project 
-# 1. antd: for building UI
-# 2. styled-components: for custom styling
-# 3. react-lazy-load-image-component: for Lazy loading images. Note: we can also avoid using this library if we do our own  implementaiton for lazy loading using intersection observer api
-# 4. papaparse: for parsing csv files
-# 5. react-testing-library: for writing unit tests
-# 6. husky: for pre-commit hooks
+ Following external libraries are used in the project 
+ 1. antd: for building UI
+ 2. styled-components: for custom styling
+ 3. react-lazy-load-image-component: for Lazy loading images. Note: we can also avoid using this library if we do our own  implementaiton for lazy loading using intersection observer api
+ 4. papaparse: for parsing csv files
+ 5. react-testing-library: for writing unit tests
+ 6. husky: for pre-commit hooks
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-##        Create React App ReadMe 
 
 # Getting Started with Create React App
 
