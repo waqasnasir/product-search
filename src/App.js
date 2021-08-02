@@ -27,7 +27,7 @@ function App() {
               Search Products
             </Link>
           }
-          extra={[<ImportProducts />]}
+          extra={[<ImportProducts key="import" />]}
         />
         <Switch>
           <Route exact path="/">

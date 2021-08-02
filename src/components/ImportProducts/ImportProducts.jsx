@@ -49,7 +49,7 @@ const ImportProducts = () => {
       >
         {uploading ? "Importing" : "Import products"}
       </Button>
-      <Upload {...props} key="upload">
+      <Upload {...props} key="upload" id="selectFile">
         <Button disabled={file} icon={<UploadOutlined />}>
           Select File
         </Button>

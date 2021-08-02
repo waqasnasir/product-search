@@ -23,7 +23,7 @@ const ProductList = ({ products }) => (
       }}
       dataSource={products}
       renderItem={(item) => (
-        <List.Item key={item.title}>
+        <List.Item key={item.gtin}>
           <ProductTile
             title={item.title}
             image={item.image_link}
@@ -31,7 +31,6 @@ const ProductList = ({ products }) => (
             skuId={item.gtin}
             gender={item.gender}
             salePrice={item.sale_price}
-            id={item.id}
           />
         </List.Item>
       )}

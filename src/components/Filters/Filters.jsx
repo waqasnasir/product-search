@@ -29,6 +29,7 @@ const Filters = () => {
     <SearchBarContainer justify="space-between" gutter={[8, 16]}>
       <Col xxl={{ span: 12 }} xs={{ span: 24 }} md={{ span: 12 }}>
         <Search
+          id="product_search"
           placeholder="Search Products"
           size="large"
           onSearch={handleSearch}
@@ -37,6 +38,7 @@ const Filters = () => {
       </Col>
       <Row>
         <Select
+          id="gender_dropdown"
           defaultValue=""
           style={{ width: 120 }}
           onChange={handleGenderSelection}
@@ -46,7 +48,11 @@ const Filters = () => {
           <Option value="male">Male</Option>
           <Option value="unisex">Unsex</Option>
         </Select>
-        <StyledCheckBox onChange={handleDiscountToggle}>
+        <StyledCheckBox
+          onChange={handleDiscountToggle}
+          role="checkbox"
+          id="discounted_items"
+        >
           Discounted Items
         </StyledCheckBox>
       </Row>
