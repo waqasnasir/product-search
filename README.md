@@ -1,18 +1,18 @@
-# This project was created using create react app you can find create react app ReadMe at the end of this page 
+## This project was created using create react app you can find create react app ReadMe at the end of this page 
 
-## ____________________________________________________introduction_________________________________________________________
+## introduction
  This is simple application which imports products data from a csv file. It loads the data into the app
  User can filter out products using the following filter options available in the app
-#                                       ----Search-----
+### Search
  user can use searchbar to search products. Results will be updated on each keypress
-#                                       ----Discounted Item---- 
+### Discounted Item
   user can user user discounted check box to view only products on which discount is available
-#                                       ----Gender Selection----
+### Gender Selection
  user can select gender from gender drop down. Gender can be female/male/unix to view collection 
  of relevant gender
 
 
-## ____________________________________________________Instructions_________________________________________________________
+## Instructions
  Please follow steps below to runt the application in your local environment
  1. git clone repo-url
  2. cd to/project/repo
@@ -21,7 +21,7 @@
  that's all you should be able to access application on localhost:3000
 
 
-## ____________________________________________________Documentation________________________________________________________
+## Documentation
  Following external libraries are used in the project 
  1. antd: for building UI
  2. styled-components: for custom styling
