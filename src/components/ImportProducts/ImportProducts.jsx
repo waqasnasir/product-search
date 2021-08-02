@@ -25,13 +25,11 @@ const ImportProducts = () => {
     Papa.parse(file, {
       header: true,
       complete: (data) => {
-        console.log(data)
         dispatch(loadProducts(data.data))
         setUploading(false)
         setFile()
       },
-      error: (error) => {
-        console.log(error)
+      error: () => {
         setUploading(false)
         setFile()
       },
